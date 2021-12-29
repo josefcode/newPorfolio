@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    <title>Frontend Mentor | Space tourism website</title>
+    <script src="navigation.js" defer></script>
+    <script src="tabs.js" defer></script>
+
+</head>
+
+<body class="crew">
+    <a class="skip-to-content" href="#main">Skip to content</a>
+    <header class="primary-header flex">
+        <div>
+            <i class="bi bi-file-code-fill logo"></i>
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
+                aria-expanded="false">Menu</span></button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span
+                            aria-hidden="true">00</span>Home</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span
+                            aria-hidden="true">01</span>Projects</a>
+                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span
+                            aria-hidden="true">02</span>Team</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="contact.html"><span
+                            aria-hidden="true">03</span>Contact</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="grid-container grid-container--crew flow">
+        <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet our team</h1>
+
+        <div class="dot-indicators flex" role="tablist" aria-label="crew member list">
+            <button aria-selected="true" aria-controls="commander-tab" role="tab" data-image="commander-image"
+                tabindex="0"><span class="sr-only">The commander</span></button>
+            <button aria-selected="false" aria-controls="mission-tab" role="tab" data-image="mission-image"
+                tabindex="-1"><span class="sr-only">The mission specialist</span></button>
+            <button aria-selected="false" aria-controls="pilot-tab" role="tab" data-image="pilot-image"
+                tabindex="-1"><span class="sr-only">The pilot</span></button>
+            <button aria-selected="false" aria-controls="crew-tab" role="tab" data-image="crew-image"
+                tabindex="-1"><span class="sr-only">The crew engineer</span></button>
+        </div>
+
+        <!-- commander -->
+        <article class="crew-details flow" id="commander-tab" role="tabpanel" tabindex="0">
+            <header class="flow flow--space-small">
+                <h2 class="fs-600 ff-serif uppercase">CEO</h2>
+                <p class="fs-700 uppercase ff-serif">Douglas Hurley</p>
+            </header>
+            <p>Responsible for managing a company's overall operations. This may include delegating and directing agendas, driving
+            profitability, managing company organizational structure, strategy, and communicating with the board.</p>
+        </article>
+
+        <!-- mission specialist -->
+        <article hidden class="crew-details flow" id="mission-tab" role="tabpanel" tabindex="0">
+            <header class="flow flow--space-small">
+                <h2 class="fs-600 ff-serif uppercase">HR</h2>
+                <p class="fs-700 uppercase ff-serif">Emma SHuttleworth</p>
+            </header>
+            <p>Human resource management refers to the process of recruiting and developing a company's workforce. The HR department is
+            concerned with identifying talent gaps in a company, advertising for positions, evaluating potential candidates, and
+            hiring top talent.</p>
+        </article>
+
+        <!-- pilot -->
+        <article hidden class="crew-details flow" id="pilot-tab" role="tabpanel" tabindex="0">
+            <header class="flow flow--space-small">
+                <h2 class="fs-600 ff-serif uppercase">software engineer</h2>
+                <p class="fs-700 uppercase ff-serif">Victor Glover</p>
+            </header>
+            <p>As fullstack developers, develop systems and software that allow users to perform specific tasks on computers or other
+            devices. They may also develop or customize existing systems that run devices or control networks.</p>
+        </article>
+
+        <!-- engineer -->
+        <article hidden class="crew-details flow" id="crew-tab" role="tabpanel" tabindex="0">
+            <header class="flow flow--space-small">
+                <h2 class="fs-600 ff-serif uppercase">UI/UX Designer</h2>
+                <p class="fs-700 uppercase ff-serif">Ava Ansari</p>
+            </header>
+            <p>UI/UX Designer responsibilities include gathering user requirements, designing graphic elements and building navigation
+            components. To be successful in this role, you should have experience with design software and wireframe tools.</p>
+        </article>
+
+
+        <picture id="commander-image">
+            <source srcset="./person003.png" type="image/webp">
+            <img src="./person003.png" alt="Douglas Hurley">
+        </picture>
+        <picture hidden id="mission-image">
+            <source srcset="./person 2.png" type="image/webp">
+            <img src="./person 2.png" alt="Douglas Hurley">
+        </picture>
+        <picture hidden id="pilot-image">
+            <source srcset="./person 004.png" type="image/webp">
+            <img src="./person 004.png" alt="Douglas Hurley">
+        </picture>
+        <picture hidden id="crew-image">
+            <source srcset="./persooon005.png" type="image/webp">
+            <img src="./persooon005.png" alt="Douglas Hurley">
+        </picture>
+    </main>
+</body>
+
+</html>
